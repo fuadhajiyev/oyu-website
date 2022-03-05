@@ -9,7 +9,9 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  background-color: #f0f2f5;
 }
+
 ul {
   list-style: none;
   margin: 0;
@@ -88,9 +90,8 @@ nav .logo img {
   padding: 0 10px;
   line-height: 14px;
 }
-.top__menu .top__menu--item:hover{
-
- text-decoration: underline;
+.top__menu .top__menu--item:hover {
+  text-decoration: underline;
 }
 
 nav {
@@ -104,6 +105,9 @@ nav {
 
 .transparent__header {
   padding: 12px 15px;
+}
+.transparent__menu {
+  z-index: 11;
 }
 .transparent__menu li {
   position: relative;
@@ -141,7 +145,7 @@ nav {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  z-index: 99;
+  z-index: 3;
 }
 
 .transparent__menu li:hover .transparent__submenu {
@@ -172,14 +176,14 @@ nav {
 .transparent__menu li:hover .fa-angle-down {
   transform: rotate(90deg);
 }
+
 .bg-video {
-  display: block;
+  display: flex;
   position: relative;
   width: 100%;
 }
 .bg-video video {
   display: block;
-  position: absolute;
   width: 100%;
   min-height: 100%;
   top: 0;
@@ -187,5 +191,58 @@ nav {
   right: 0;
   left: 0;
   object-fit: cover;
-  z-index: -56;
+  z-index: -1;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.cards__card {
+  display: flex;
+  flex-direction: column;
+  width: 244px;
+  margin-right: 20px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.cards__card:last-child{
+  margin-right: 0;
+}
+
+.cards__card--img {
+  margin: 0 auto;
+  width: 100px;
+}
+.cards__card--body {
+  text-align: center;
+}
+.cards__card--body p {
+  font-size: 12px;
+  word-break: break-word;
+  padding: 15px ;
+}
+.cards__card--body a {
+  display: block;
+  width: 100%;
+  padding: 17px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0px;
+  box-sizing: border-box;
+  color: #0e1013;
+  text-transform: uppercase;
+  border: 1px solid #0e1013;
+  transition: all 0.4s ease;
+}
+
+
+.cards__card--body a:hover{
+  background-color: #0e10136c;
+  color: #fff;
 }
